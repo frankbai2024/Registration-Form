@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>Welcome to Register</header>
+
+    <form action="submit" method="post" class="registration-form" autocomplete="0">
+        <fieldset>
+            <legend>
+                <h1>Registration Form</h1>
+            </legend>
+            <div>
+                <label for="first name" class="required">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required maxlength="15" length="55"
+                    placeholder="max 15 words"><br>
+            </div>
+            <div>
+                <label for="last name" class="required">Last Name:</label>
+                <input type="text" id="last_name" name="las_name" required maxlength="15"
+                    placeholder="max 15 words"><br>
+            </div>
+            <div>
+                <label for="email" class="required">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="abc@yourmail.com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Enter a valid email address like name@example.com"><br>
+            </div>
+
+            <div>
+                <label for="password" class="required">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="8-10 characters"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,10}$"
+                    title="Must include at least 1 special character (!@#$%^&*) & 1 Uppercase & 1 Lowercase & 1 Digital & length between 8-10"><br>
+
+                <label for="confirm_password" class="required">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required
+                    placeholder="8-10 characters"><br>
+            </div>
+
+            <label for="date of birth" class="required">Date of Birth:<input type="date" id="dob" name="dob" required
+                    max="2008-01-01"></label>
+
+            </div>
+
+            <label for="gender" class="required">Gender</label>
+            <div style="display:inline-block">
+                <label><input type="radio" id="gender" name="gender" value="male" required>male</label>
+            </div>
+            <div style="display:inline-block">
+                <label><input type="radio" id="gender" name="gender" value="female">female</label>
+            </div>
+            <div style="display:inline-block">
+                <label><input type="radio" id="gender" name="gender" value="other">other</label>
+            </div><br>
+
+            <div>
+                <label for="profession" class="required">Your Profession</label>
+                <select id="profession" name="profession" required>
+                    <option value="web_development" selected>Web Development</option>
+                    <option value="data_analytics">Data Analytics</option>
+                    <option value="ui_design">UI/UX Design</option>
+                    <option value="other">Other</option>
+                </select><br>
+            </div>
+            <div>
+                <label for="comment">Introduce yourself</label>
+                <textarea name="comment" id="comment" cols="25" rows="3" maxlength="300"
+                    placeholder="sth more about you in 300 words"></textarea>
+            </div>
+        </fieldset>
+        <div>
+            <label for="accept" class="required">
+                <input type="checkbox" id="accept" name="accept" value="accept" required>
+                I accept Terms and Conditions</label><br>
+        </div>
+        <button type="submit" value="Register">Submit</button>
+    </form>
+
+    <footer>Copyright 2025 JR Full-Stack-28 Frank</footer>
+</body>
+
+</html>
